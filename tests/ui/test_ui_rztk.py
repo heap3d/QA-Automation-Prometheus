@@ -10,4 +10,3 @@ def test_user_button():
 
     first_page.go_to()
     first_page.try_login('user', 'pass')
-    sleep(5)
