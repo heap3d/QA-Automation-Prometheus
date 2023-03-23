@@ -1,5 +1,6 @@
 import pytest
 from modules.api.clients.github import GitHub
+from modules.ui.page_objects.rozetka_page import RozetkaPage
 
 
 class User:
@@ -31,3 +32,12 @@ def user():
 def github_api():
     api = GitHub()
     yield api
+
+
+@pytest.fixture
+def rozetka():
+    rozetka = RozetkaPage()
+
+    yield rozetka
+
+    rozetka.close()
